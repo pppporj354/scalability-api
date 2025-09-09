@@ -18,9 +18,9 @@ export const options: Options = {
       startVUs: 0,
       stages: [
         // This is the load profile for the readers.
-        { duration: "30s", target: 80 }, // Stage 1: Ramp up from 0 to 80 VUs over 30 seconds.
-        { duration: "1m", target: 80 }, // Stage 2: Sustain 80 VUs for 1 minute (this is the main load period).
-        { duration: "20s", target: 0 }, // Stage 3: Ramp down from 80 to 0 VUs over 20 seconds.
+        { duration: "1m", target: 800 }, // Stage 1: Ramp up from 0 to 800 VUs over 1 minute.
+        { duration: "1m", target: 800 }, // Stage 2: Sustain 800 VUs for 1 minute (this is the main load period).
+        { duration: "30s", target: 0 }, // Stage 3: Ramp down from 800 to 0 VUs over 30 seconds.
       ],
     },
     // The second scenario is for our "Creator" persona.
@@ -29,9 +29,9 @@ export const options: Options = {
       exec: "writeAPI",
       startVUs: 0,
       stages: [
-        { duration: "30s", target: 20 }, // Ramp up to 20 VUs over 30s.
-        { duration: "1m", target: 20 }, // Sustain 20 VUs for 1 minute.
-        { duration: "20s", target: 0 }, // Ramp down to 0 VUs.
+        { duration: "1m", target: 200 }, // Ramp up to 200 VUs over 1 minute.
+        { duration: "2m", target: 200 }, // Sustain 200 VUs for 2 minutes.
+        { duration: "30s", target: 0 }, // Ramp down to 0 VUs.
       ],
     },
   },
